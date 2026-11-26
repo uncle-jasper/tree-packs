@@ -1,0 +1,21 @@
+{
+  "treePacks": 1,
+  "packs": [
+    {
+      "id": "rain",
+      "name": "Rain",
+      "version": "1.0.0",
+      "file": "packs/rain.tree-pack.json",
+      "description": "From a grey afternoon to a neon night.",
+      "swatches": ["#ccd4d6", "#192125", "#0e1517", "#141a1d", "#0b1115"]
+    },
+    {
+      "id": "judgment-day",
+      "name": "Judgment Day",
+      "version": "1.0.0",
+      "file": "packs/judgment-day.tree-pack.json",
+      "description": "Cold steel blue, chrome, molten iron and machine vision.",
+      "swatches": ["#091019", "#15181b", "#110c0a", "#0d0505"]
+    }
+  ]
+}
