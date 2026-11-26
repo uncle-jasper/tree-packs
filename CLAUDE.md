@@ -7,7 +7,7 @@ This repo is Dan's pack studio and the shelf the apps install from. Theme packs 
 - **Never touch the app repos from here** (`tree`, `ginkgo`, `tree-obsidian`). A pack must never need an app change. If a pack idea needs an effect the apps don't have, write it under "Effect requests" below and tell Dan. Don't build it here.
 - **A pack file is data only.** Colors, names and effect settings, exactly as `FORMAT.md` describes. Never code, CSS, HTML or links.
 - **IDs never change.** Pack and theme IDs are what people's saved settings point at. Rename the `name`, never the `id`. Removing a theme from a published pack breaks anyone using it, so retire themes only with Dan's say-so.
-- **Run `node scripts/check.mjs` before every commit.** It must say "All good." Treat its warnings as real: text should be 7:1 against the background for long writing, links 4.5:1. Loud themes (HUD) may stay below 7:1 if Dan accepts it.
+- **Run `node scripts/check.mjs` before every commit.** It must say "All good." Treat its warnings as real: text should be 7:1 against the background for long writing, links 4.5:1. Loud themes may stay below 7:1 if Dan accepts it: HUD's red (`#ff5a48`, 6.5:1) is his choice, after comparing it with a brighter `#ff6a56`. Its checker warning is expected.
 - **Show before you publish.** Dan decides by looking. Build a preview (an Artifact page with Tree-style windows, like the Rain and Judgment Day study pages) and iterate there. The pack file is written once the look is agreed.
 - Dan isn't a programmer. Talk about looks and choices, not code. He has strong aesthetic instincts: treat "this feels off" as a requirement.
 
