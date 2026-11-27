@@ -2,7 +2,7 @@
   "treePack": 1,
   "id": "rain",
   "name": "Rain",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "From a grey afternoon to a neon night.",
   "everyday": "rain",
   "themes": [
@@ -36,16 +36,7 @@
       "name": "wet street",
       "colors": { "bg": "#141a1d", "surface": "#1a2125", "text": "#c6cdcf", "accent": "#d4a15e", "muted": "#5e6b70", "border": "#242d32" },
       "effects": [
-        {
-          "type": "light",
-          "pulse": true,
-          "spots": [
-            { "x": 0.68, "y": 1, "w": 0.16, "h": 0.2, "color": "#e0a95a", "strength": 0.09 }
-          ],
-          "streaks": [
-            { "x": 0.68, "w": 0.05, "h": 0.42, "color": "#e0a95a", "strength": 0.1 }
-          ]
-        },
+        { "type": "light", "streaks": [ { "x": 0.5, "w": 1, "h": 0.4, "color": "#d9a35c", "strength": 0.07 } ] },
         { "type": "particles", "switch": "falling rain", "on": false, "color": "#c8b996" }
       ]
     },
