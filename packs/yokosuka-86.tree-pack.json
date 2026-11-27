@@ -1,0 +1,200 @@
+{
+  "treePack": 1,
+  "id": "yokosuka-86",
+  "name": "Yokosuka '86",
+  "version": "0.1.0",
+  "description": "Paper walls, grey skies, shop signs, first snow.",
+  "everyday": "sakuragaoka",
+  "themes": [
+    {
+      "id": "sakuragaoka",
+      "name": "sakuragaoka",
+      "light": true,
+      "colors": {
+        "bg": "#e8dfcd",
+        "surface": "#c9b08c",
+        "text": "#2a2119",
+        "accent": "#6b4528",
+        "muted": "#7d6850",
+        "border": "#a98a63"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "spots": [
+            {
+              "x": 0.15,
+              "y": 0,
+              "w": 0.7,
+              "h": 0.6,
+              "color": "#fff3d2",
+              "strength": 0.22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dobuita",
+      "name": "dobuita",
+      "colors": {
+        "bg": "#1d1a22",
+        "surface": "#24202a",
+        "text": "#e6ddd2",
+        "accent": "#ec7a62",
+        "muted": "#706673",
+        "border": "#302a36"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "spots": [
+            {
+              "x": 0.22,
+              "y": 0,
+              "w": 0.45,
+              "h": 0.5,
+              "color": "#ff8a5c",
+              "strength": 0.11
+            },
+            {
+              "x": 0.8,
+              "y": 0,
+              "w": 0.4,
+              "h": 0.45,
+              "color": "#ffd27a",
+              "strength": 0.08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harbor",
+      "name": "harbor",
+      "colors": {
+        "bg": "#2b3031",
+        "surface": "#333a3b",
+        "text": "#d5d9d6",
+        "accent": "#dc8d5b",
+        "muted": "#6f7b79",
+        "border": "#3e4647"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "streaks": [
+            {
+              "x": 0.5,
+              "w": 1,
+              "h": 0.35,
+              "color": "#4f7a6c",
+              "strength": 0.14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neon-night",
+      "name": "neon night",
+      "colors": {
+        "bg": "#141518",
+        "surface": "#1a1c20",
+        "text": "#d9d9d6",
+        "accent": "#ea6352",
+        "muted": "#666a70",
+        "border": "#25282d"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "flicker": true,
+          "spots": [
+            {
+              "x": 0.18,
+              "y": 0,
+              "w": 0.4,
+              "h": 0.55,
+              "color": "#ff4a3a",
+              "strength": 0.13
+            },
+            {
+              "x": 0.82,
+              "y": 0,
+              "w": 0.38,
+              "h": 0.5,
+              "color": "#c8ffe6",
+              "strength": 0.09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arcade",
+      "name": "arcade",
+      "colors": {
+        "bg": "#0d0b16",
+        "surface": "#141022",
+        "text": "#d9d5f0",
+        "accent": "#4fd6e8",
+        "muted": "#5f5982",
+        "border": "#221d36"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "streaks": [
+            {
+              "x": 0.5,
+              "w": 1,
+              "h": 0.4,
+              "color": "#b04cff",
+              "strength": 0.07
+            }
+          ]
+        },
+        {
+          "type": "overlay",
+          "scanlines": 0.1,
+          "vignette": {
+            "color": "#000000",
+            "strength": 0.3
+          }
+        },
+        {
+          "type": "glow",
+          "target": "links",
+          "strength": 0.3
+        }
+      ]
+    },
+    {
+      "id": "first-snow",
+      "name": "first snow",
+      "colors": {
+        "bg": "#1a2230",
+        "surface": "#1f2838",
+        "text": "#d7dfe9",
+        "accent": "#a3c6e8",
+        "muted": "#61718a",
+        "border": "#2a3446"
+      },
+      "effects": [
+        {
+          "type": "particles",
+          "switch": "falling snow",
+          "on": true,
+          "style": "snow",
+          "color": "#eef3f9",
+          "opacity": 1.1,
+          "density": 0.7,
+          "speed": 1,
+          "length": 1,
+          "slant": 0.05
+        }
+      ]
+    }
+  ]
+}
