@@ -44,7 +44,6 @@ function checkEffect(where, e) {
   if (e.type === 'particles') {
     if (e.color !== undefined && !HEX.test(e.color)) fail(where, 'color should be #rrggbb');
     checkNumbers(where, e, { opacity: [0.2, 3], density: [0.2, 3], speed: [0.2, 3], length: [0.2, 3], slant: [-0.5, 0.5] });
-    if (e.style !== undefined && !['rain', 'snow'].includes(e.style)) fail(where, 'style should be rain or snow');
     (e.regions ?? []).forEach((r, i) => { checkRect(`${where} region ${i + 1}`, r); if (!inRange(r.chance, 0, 1)) fail(`${where} region ${i + 1}`, 'chance should be 0–1'); });
     if ((e.regions ?? []).length > 8) fail(where, 'at most 8 regions');
   }

@@ -7,13 +7,7 @@
       "version": "1.1.1",
       "file": "packs/rain.tree-pack.json",
       "description": "From a grey afternoon to a neon night.",
-      "swatches": [
-        "#ccd4d6",
-        "#192125",
-        "#0e1517",
-        "#141a1d",
-        "#0b1115"
-      ]
+      "swatches": ["#ccd4d6", "#192125", "#0e1517", "#141a1d", "#0b1115"]
     },
     {
       "id": "judgment-day",
@@ -21,28 +15,7 @@
       "version": "1.0.1",
       "file": "packs/judgment-day.tree-pack.json",
       "description": "Cold steel blue, chrome, molten iron and machine vision.",
-      "swatches": [
-        "#091019",
-        "#15181b",
-        "#110c0a",
-        "#0d0505"
-      ]
-    },
-    {
-      "id": "yokosuka-86",
-      "name": "Yokosuka '86",
-      "version": "0.1.0",
-      "file": "packs/yokosuka-86.tree-pack.json",
-      "description": "Paper walls, grey skies, shop signs, first snow.",
-      "swatches": [
-        "#2b2927",
-        "#1c1612",
-        "#1d1a22",
-        "#2a2b29",
-        "#141518",
-        "#0d0b16",
-        "#1a2230"
-      ]
+      "swatches": ["#091019", "#15181b", "#110c0a", "#0d0505"]
     }
   ]
 }

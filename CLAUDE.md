@@ -19,6 +19,7 @@ This repo is Dan's pack studio and the shelf the apps install from. Theme packs 
 | `packs/<id>.tree-pack.json` | One file per pack |
 | `index.json` | The shelf listing the apps read. Every pack in `packs/` is listed, with matching name, version, description and swatches. |
 | `scripts/check.mjs` | Checks every pack and the index against the format. No dependencies. |
+| `drafts/` | Packs in progress. Not on the shelf: `index.json` and the apps never see this folder. Move a pack to `packs/` when Dan approves it. |
 
 ## Making a pack
 
@@ -49,6 +50,8 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 | Rain `rain` | overcast, **rain**, downpour, wet street, wet neon | falling rain on all five (on for downpour, wet neon); wet neon: crossed magenta and cyan light, lit rain, link glow | 1.0.0, launch pack |
 | Judgment Day `judgment-day` | **cyberdyne**, liquid metal, steel mill, hud | cyberdyne: cold light from above; liquid metal: chrome sheen on headings; steel mill: heat glow (12%, raised from 7% in 1.0.1), glowing cursor and links; hud: red glow, scanlines, red vignette | 1.0.1, launch pack |
 
+**In progress:** Yokosuka '86 `yokosuka-86` (`drafts/`), Dan's Shenmue pack, set aside to pick up again. See "Drafts" below.
+
 Built into the apps, not here: **Classic** (parchment, paper, ash, sage, dark, moss, slate, custom 1–3) and, for now, **Retro** (game boy, moonwalker, terminal with crt, amber crt, doogie journal). Retro moves here once the effects can do everything its themes need.
 
 ## Effect requests
@@ -60,3 +63,22 @@ Retro's looks are drawn by each app's own code today. These effects would let Re
 - **Screen flicker**: the CRT's flicker over the whole screen or the text, not only colored light behind it (`light` already has `flicker`). For terminal with crt, amber crt and doogie journal.
 - **CRT screen shape**: the curved-screen edges and brighter rim of the CRT look.
 - **Phosphor bloom**: a softer, wider glow than `glow`, for moonwalker and the CRT themes. May turn out to be `glow` with a larger range.
+- **Snow**: a `style: "snow"` for `particles` (round flakes that drift and sway; `length` sets their size). Built and tested in Tree's `packs.js` on the draft pull request "packs.js: snow"; needs that merged, the engine copied to Ginkgo and the plugin, and FORMAT.md and `check.mjs` to allow `style`. Yokosuka '86's first snow uses it.
+
+## Drafts
+
+### Yokosuka '86 (`drafts/yokosuka-86.tree-pack.json`)
+
+Dan's favourite game, Shenmue (Dreamcast): the mood of a 1986 December in a harbor town, not the story. No characters, quotes or the game's title (Dan's rules for film and game packs). Description: "Paper walls, grey skies, shop signs, first snow."
+
+Themes and where they stand with Dan:
+- **sakuragaoka**: the house's paper walls. Rebuilt from his stills of the interior (grey-taupe plaster, near-black beams, red-lacquer window frames, light through shoji). Not yet reviewed after the rebuild.
+- **leather**: the earlier, browner sakuragaoka. Dan liked it for looking like the jacket, so it stayed under this name.
+- **dobuita**: the shopping street at dusk. Dan liked it.
+- **harbor**: three tries. Too green twice; Dan wants grey. Latest: neutral warehouse greys, grey-violet sky light above, a faint dark-green sea band at the bottom, forklift orange accent, falling rain switch. Not yet reviewed; the sea band may need to go.
+- **neon night**: jazz-bar red and convenience-store white-green signs. From memory, not stills.
+- **arcade**: Dan liked it.
+- **first snow**: needs snow (Effect requests). From memory, not stills.
+
+Dan's picture of Shenmue: a lot of grey, old quaint shops, grey skies; at night, neon from the jazz bar and convenience store signs. His stills (house interior, harbor by day and in rain) helped far more than memory: ask for stills of Dobuita by day and night, and of snow, before tuning those. Everyday theme is still open: sakuragaoka is dark now; dobuita, or a light paper theme, are the options to put to him.
+
