@@ -4,7 +4,7 @@
     {
       "id": "rain",
       "name": "Rain",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "file": "packs/rain.tree-pack.json",
       "description": "From a grey afternoon to a neon night.",
       "swatches": ["#ccd4d6", "#192125", "#0e1517", "#141a1d", "#0b1115"]
