@@ -55,4 +55,8 @@ Built into the apps, not here: **Classic** (parchment, paper, ash, sage, dark, m
 
 Effects the apps don't have yet. Each needs one app update, after which any pack can use it.
 
-- *(none yet)*
+Retro's looks are drawn by each app's own code today. These effects would let Retro move here as an ordinary pack (PACKS-PLAN.md, phase 6), and any other pack use them too. Each must match the Retro themes exactly against the baseline screenshots in Tree's `baseline/` before Retro moves.
+
+- **Screen flicker**: the CRT's flicker over the whole screen or the text, not only colored light behind it (`light` already has `flicker`). For terminal with crt, amber crt and doogie journal.
+- **CRT screen shape**: the curved-screen edges and brighter rim of the CRT look.
+- **Phosphor bloom**: a softer, wider glow than `glow`, for moonwalker and the CRT themes. May turn out to be `glow` with a larger range.
