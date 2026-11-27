@@ -24,6 +24,14 @@
       "file": "packs/noir.tree-pack.json",
       "description": "Silver light, slick streets, tight alleys and smoky rooms.",
       "swatches": ["#d8d5ce", "#141312", "#201f1d", "#0d0e0e", "#090908"]
+    },
+    {
+      "id": "los-angeles",
+      "name": "Los Angeles",
+      "version": "1.0.0",
+      "file": "packs/los-angeles.tree-pack.json",
+      "description": "June gloom, canyon dust, ballpark blue, Malibu sunset, downtown at night.",
+      "swatches": ["#c8cbc9", "#e0c595", "#004b85", "#e39a4a", "#0a1020", "#17120c"]
     }
   ]
 }

@@ -52,6 +52,7 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 | Rain `rain` | overcast, **rain**, downpour, wet street, wet neon | falling rain on all five (on for downpour, wet neon); wet neon: crossed magenta and cyan light, lit rain, link glow | 1.0.0, launch pack |
 | Judgment Day `judgment-day` | **cyberdyne**, liquid metal, steel mill, hud | cyberdyne: cold light from above; liquid metal: chrome sheen on headings; steel mill: heat glow (12%, raised from 7% in 1.0.1), glowing cursor and links; hud: red glow, scanlines, red vignette | 1.0.1, launch pack |
 | Noir `noir` | late edition, **nitrate**, smoke room, wet asphalt, alley | all greyscale, faint warm-silver tint, accent is the brightest white. late edition and nitrate plain; smoke room: faint text bloom; wet asphalt: lamplight wash from the top, reflection from the bottom, falling rain (on), like downpour; alley: black vignette | 1.0.0 |
+| Los Angeles `los-angeles` | june gloom, griffith park, dodger blue, malibu sunset, **downtown skyline**, century city | Dan's LA, morning into night, most palettes from his photos. june gloom, griffith park, dodger blue plain (dodger blue is #004B85, a step darker than the official #005A9C, Dan's pick); malibu sunset: red sky wash from the top, gold from the bottom; downtown skyline: amber city glow from the bottom; century city: tungsten glow from the top | 1.0.0 |
 
 **In progress:** Yokosuka '86 `yokosuka-86` (`drafts/`), Dan's Shenmue pack, set aside to pick up again. See "Drafts" below.
 
