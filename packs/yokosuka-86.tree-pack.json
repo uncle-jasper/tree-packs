@@ -9,26 +9,26 @@
     {
       "id": "sakuragaoka",
       "name": "sakuragaoka",
-      "light": true,
+      "light": false,
       "colors": {
-        "bg": "#e8dfcd",
-        "surface": "#c9b08c",
-        "text": "#2a2119",
-        "accent": "#6b4528",
-        "muted": "#7d6850",
-        "border": "#a98a63"
+        "bg": "#1c1612",
+        "surface": "#241c17",
+        "text": "#e6ddcd",
+        "accent": "#c8664b",
+        "muted": "#867464",
+        "border": "#3a2d24"
       },
       "effects": [
         {
           "type": "light",
           "spots": [
             {
-              "x": 0.15,
-              "y": 0,
-              "w": 0.7,
-              "h": 0.6,
-              "color": "#fff3d2",
-              "strength": 0.22
+              "x": 0.6,
+              "y": 0.1,
+              "w": 0.55,
+              "h": 0.45,
+              "color": "#efe6d8",
+              "strength": 0.07
             }
           ]
         }
@@ -73,25 +73,41 @@
       "id": "harbor",
       "name": "harbor",
       "colors": {
-        "bg": "#2b3031",
-        "surface": "#333a3b",
-        "text": "#d5d9d6",
-        "accent": "#dc8d5b",
-        "muted": "#6f7b79",
-        "border": "#3e4647"
+        "bg": "#22241f",
+        "surface": "#2a2c26",
+        "text": "#d7d9d0",
+        "accent": "#e2803f",
+        "muted": "#70746a",
+        "border": "#373a32"
       },
       "effects": [
         {
           "type": "light",
+          "spots": [
+            {
+              "x": 0.5,
+              "y": 0,
+              "w": 0.95,
+              "h": 0.55,
+              "color": "#9a9fb3",
+              "strength": 0.1
+            }
+          ],
           "streaks": [
             {
               "x": 0.5,
               "w": 1,
-              "h": 0.35,
-              "color": "#4f7a6c",
-              "strength": 0.14
+              "h": 0.3,
+              "color": "#5a7a6e",
+              "strength": 0.08
             }
           ]
+        },
+        {
+          "type": "particles",
+          "switch": "falling rain",
+          "on": false,
+          "color": "#aab0bf"
         }
       ]
     },
