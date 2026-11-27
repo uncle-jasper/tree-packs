@@ -12,7 +12,7 @@
       "light": true,
       "colors": { "bg": "#ccd4d6", "surface": "#c1cacd", "text": "#1f2b2f", "accent": "#2b616d", "muted": "#647579", "border": "#adb9bc" },
       "effects": [
-        { "type": "particles", "switch": "falling rain", "on": false, "color": "#46646e", "opacity": 1.6 }
+        { "type": "particles", "switch": "falling rain", "on": false, "color": "#46646e", "opacity": 1.3 }
       ]
     },
     {
