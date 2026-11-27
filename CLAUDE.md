@@ -23,6 +23,7 @@ This repo is Dan's pack studio and the shelf the apps install from. Theme packs 
 ## Making a pack
 
 1. Talk it through with Dan: the mood, the source, 2–6 themes, which one is the everyday theme (first opened, and the one most people would write in).
+   Also its description: one short line naming what's in it, like Judgment Day's "Cold steel blue, chrome, molten iron and machine vision." Every pack needs one.
 2. Preview it as an Artifact page. Every theme shown as a Tree window (editor and preview side by side), with working effects and switches.
 3. Iterate until Dan is happy.
 4. Write `packs/<id>.tree-pack.json`, add the pack to `index.json` (swatches = each theme's `bg`, in order).
@@ -46,7 +47,7 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 | Pack | Themes (everyday first in bold) | Effects | Status |
 |---|---|---|---|
 | Rain `rain` | overcast, **rain**, downpour, wet street, wet neon | falling rain on all five (on for downpour, wet neon); wet neon: crossed magenta and cyan light, lit rain, link glow | 1.0.0, launch pack |
-| Judgment Day `judgment-day` | **cyberdyne**, liquid metal, steel mill, hud | cyberdyne: cold light from above; liquid metal: chrome sheen on headings; steel mill: heat glow, glowing cursor and links; hud: red glow, scanlines, red vignette | 1.0.0, launch pack |
+| Judgment Day `judgment-day` | **cyberdyne**, liquid metal, steel mill, hud | cyberdyne: cold light from above; liquid metal: chrome sheen on headings; steel mill: heat glow (12%, raised from 7% in 1.0.1), glowing cursor and links; hud: red glow, scanlines, red vignette | 1.0.1, launch pack |
 
 Built into the apps, not here: **Classic** (parchment, paper, ash, sage, dark, moss, slate, custom 1–3) and, for now, **Retro** (game boy, moonwalker, terminal with crt, amber crt, doogie journal). Retro moves here once the effects can do everything its themes need.
 
@@ -54,4 +55,8 @@ Built into the apps, not here: **Classic** (parchment, paper, ash, sage, dark, m
 
 Effects the apps don't have yet. Each needs one app update, after which any pack can use it.
 
-- *(none yet)*
+Retro's looks are drawn by each app's own code today. These effects would let Retro move here as an ordinary pack (PACKS-PLAN.md, phase 6), and any other pack use them too. Each must match the Retro themes exactly against the baseline screenshots in Tree's `baseline/` before Retro moves.
+
+- **Screen flicker**: the CRT's flicker over the whole screen or the text, not only colored light behind it (`light` already has `flicker`). For terminal with crt, amber crt and doogie journal.
+- **CRT screen shape**: the curved-screen edges and brighter rim of the CRT look.
+- **Phosphor bloom**: a softer, wider glow than `glow`, for moonwalker and the CRT themes. May turn out to be `glow` with a larger range.

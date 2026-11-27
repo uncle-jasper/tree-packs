@@ -24,7 +24,7 @@ A pack file is **data only**. It holds names, colors and effect settings. It nev
 | `id` | yes | Permanent ID. Lowercase letters, digits and hyphens, 2–32 characters. **Never changes**, even if the name does: people's saved settings point at it. |
 | `name` | yes | Shown in the pack row. Up to 24 characters. |
 | `version` | yes | `major.minor.patch`. Raise it when the pack changes, so apps can offer the update. |
-| `description` | no | One line for the Packs screen. Up to 120 characters. |
+| `description` | yes | One short line for the Packs screen and the pack row: the pack's mood in a few words. Up to 120 characters; aim for under 60. |
 | `everyday` | yes | The ID of the theme a pack opens on the first time it's chosen. Must be one of its themes. |
 | `themes` | yes | 1 to 8 themes, in the order the theme row steps through them. |
 

@@ -12,7 +12,7 @@
     {
       "id": "judgment-day",
       "name": "Judgment Day",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "packs/judgment-day.tree-pack.json",
       "description": "Cold steel blue, chrome, molten iron and machine vision.",
       "swatches": ["#091019", "#15181b", "#110c0a", "#0d0505"]

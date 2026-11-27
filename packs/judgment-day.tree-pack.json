@@ -2,7 +2,7 @@
   "treePack": 1,
   "id": "judgment-day",
   "name": "Judgment Day",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cold steel blue, chrome, molten iron and machine vision.",
   "everyday": "cyberdyne",
   "themes": [
@@ -28,7 +28,7 @@
       "name": "steel mill",
       "colors": { "bg": "#110c0a", "surface": "#19120f", "text": "#e3d4c5", "accent": "#ff7a1f", "muted": "#6f5b4d", "border": "#2c211b" },
       "effects": [
-        { "type": "light", "streaks": [ { "x": 0.5, "w": 1, "h": 0.45, "color": "#ff5a14", "strength": 0.07 } ] },
+        { "type": "light", "streaks": [ { "x": 0.5, "w": 1, "h": 0.45, "color": "#ff5a14", "strength": 0.12 } ] },
         { "type": "glow", "target": "cursor", "strength": 0.8 },
         { "type": "glow", "target": "links", "strength": 0.35 }
       ]
