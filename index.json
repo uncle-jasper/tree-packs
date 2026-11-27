@@ -16,6 +16,14 @@
       "file": "packs/judgment-day.tree-pack.json",
       "description": "Cold steel blue, chrome, molten iron and machine vision.",
       "swatches": ["#091019", "#15181b", "#110c0a", "#0d0505"]
+    },
+    {
+      "id": "noir",
+      "name": "Noir",
+      "version": "1.0.0",
+      "file": "packs/noir.tree-pack.json",
+      "description": "Silver light, slick streets, tight alleys and smoky rooms.",
+      "swatches": ["#d8d5ce", "#141312", "#201f1d", "#0d0e0e", "#090908"]
     }
   ]
 }

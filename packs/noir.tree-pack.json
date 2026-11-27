@@ -1,0 +1,76 @@
+{
+  "treePack": 1,
+  "id": "noir",
+  "name": "Noir",
+  "version": "1.0.0",
+  "description": "Silver light, slick streets, tight alleys and smoky rooms.",
+  "everyday": "nitrate",
+  "themes": [
+    {
+      "id": "late-edition",
+      "name": "late edition",
+      "light": true,
+      "colors": { "bg": "#d8d5ce", "surface": "#ccc9c1", "text": "#1c1b19", "accent": "#45413b", "muted": "#6f6b64", "border": "#b8b4ab" },
+      "effects": [
+        { "type": "light", "spots": [ { "x": 0.82, "y": 0, "w": 0.7, "h": 0.7, "color": "#ffffff", "strength": 0.3 } ] },
+        { "type": "overlay", "vignette": { "color": "#57534b", "strength": 0.3 } }
+      ]
+    },
+    {
+      "id": "nitrate",
+      "name": "nitrate",
+      "colors": { "bg": "#141312", "surface": "#1b1a19", "text": "#cfcbc4", "accent": "#f3f0ea", "muted": "#6e6a64", "border": "#282624" },
+      "effects": [
+        { "type": "light", "spots": [ { "x": 0.2, "y": 0, "w": 0.8, "h": 0.8, "color": "#efe9dd", "strength": 0.07 } ] }
+      ]
+    },
+    {
+      "id": "smoke-room",
+      "name": "smoke room",
+      "colors": { "bg": "#201f1d", "surface": "#272624", "text": "#d8d4cd", "accent": "#f6f3ed", "muted": "#7d7973", "border": "#33312e" },
+      "effects": [
+        {
+          "type": "light",
+          "spots": [
+            { "x": 0.86, "y": 0.9, "w": 0.7, "h": 0.8, "color": "#efe6d4", "strength": 0.11 },
+            { "x": 0.45, "y": 0.32, "w": 1, "h": 0.4, "color": "#cfcac1", "strength": 0.05 }
+          ]
+        },
+        { "type": "glow", "target": "text", "strength": 0.15 },
+        { "type": "glow", "target": "cursor", "strength": 0.6 }
+      ]
+    },
+    {
+      "id": "wet-asphalt",
+      "name": "wet asphalt",
+      "colors": { "bg": "#0d0e0e", "surface": "#131414", "text": "#c4c4bf", "accent": "#ebe8e0", "muted": "#5c5c58", "border": "#1e1f1e" },
+      "effects": [
+        {
+          "type": "light",
+          "spots": [ { "x": 0.74, "y": 0, "w": 0.42, "h": 0.55, "color": "#e9e4d8", "strength": 0.11 } ],
+          "streaks": [
+            { "x": 0.74, "w": 0.07, "h": 0.55, "color": "#e9e4d8", "strength": 0.11 },
+            { "x": 0.28, "w": 0.04, "h": 0.34, "color": "#d6d2c8", "strength": 0.06 },
+            { "x": 0.5, "w": 1, "h": 0.28, "color": "#d6d2c8", "strength": 0.04 }
+          ]
+        },
+        {
+          "type": "particles", "switch": "falling rain", "on": true, "color": "#a6a59f", "slant": 0.08,
+          "regions": [ { "x": 0.56, "y": 0, "w": 0.36, "h": 0.6, "color": "#f2eee4", "chance": 0.5 } ]
+        }
+      ]
+    },
+    {
+      "id": "alley",
+      "name": "alley",
+      "colors": { "bg": "#090908", "surface": "#0f0f0e", "text": "#b9b6b0", "accent": "#e0dcd4", "muted": "#53514d", "border": "#1a1918" },
+      "effects": [
+        { "type": "light", "spots": [ { "x": 0.5, "y": 0, "w": 0.34, "h": 0.5, "color": "#ebe5d8", "strength": 0.13 } ] },
+        { "type": "light", "switch": "flickering bulb", "on": false, "flicker": true,
+          "spots": [ { "x": 0.5, "y": 0, "w": 0.22, "h": 0.32, "color": "#f4efe4", "strength": 0.12 } ] },
+        { "type": "overlay", "vignette": { "color": "#000000", "strength": 0.6 } },
+        { "type": "particles", "switch": "falling rain", "on": false, "color": "#8f8d88", "density": 0.6 }
+      ]
+    }
+  ]
+}

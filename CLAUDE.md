@@ -49,6 +49,7 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 |---|---|---|---|
 | Rain `rain` | overcast, **rain**, downpour, wet street, wet neon | falling rain on all five (on for downpour, wet neon); wet neon: crossed magenta and cyan light, lit rain, link glow | 1.0.0, launch pack |
 | Judgment Day `judgment-day` | **cyberdyne**, liquid metal, steel mill, hud | cyberdyne: cold light from above; liquid metal: chrome sheen on headings; steel mill: heat glow (12%, raised from 7% in 1.0.1), glowing cursor and links; hud: red glow, scanlines, red vignette | 1.0.1, launch pack |
+| Noir `noir` | late edition, **nitrate**, smoke room, wet asphalt, alley | all greyscale, faint warm-silver tint, accent is the brightest white. late edition: window light, print-edge vignette; nitrate: key light upper left; smoke room: smoke band, desk lamp, faint text bloom, glowing cursor; wet asphalt: streetlamp and its reflection, falling rain (on) lit under the lamp; alley: bare bulb, black vignette, flickering bulb and rain switches (off) | 1.0.0 |
 
 **In progress:** Yokosuka '86 `yokosuka-86` (`drafts/`), Dan's Shenmue pack, set aside to pick up again. See "Drafts" below.
 
