@@ -47,7 +47,7 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 | Pack | Themes (everyday first in bold) | Effects | Status |
 |---|---|---|---|
 | Rain `rain` | overcast, **rain**, downpour, wet street, wet neon | falling rain on all five (on for downpour, wet neon); wet neon: crossed magenta and cyan light, lit rain, link glow | 1.0.0, launch pack |
-| Judgment Day `judgment-day` | **cyberdyne**, liquid metal, steel mill, hud | cyberdyne: cold light from above; liquid metal: chrome sheen on headings; steel mill: heat glow, glowing cursor and links; hud: red glow, scanlines, red vignette | 1.0.0, launch pack |
+| Judgment Day `judgment-day` | **cyberdyne**, liquid metal, steel mill, hud | cyberdyne: cold light from above; liquid metal: chrome sheen on headings; steel mill: heat glow (12%, raised from 7% in 1.0.1), glowing cursor and links; hud: red glow, scanlines, red vignette | 1.0.1, launch pack |
 
 Built into the apps, not here: **Classic** (parchment, paper, ash, sage, dark, moss, slate, custom 1–3) and, for now, **Retro** (game boy, moonwalker, terminal with crt, amber crt, doogie journal). Retro moves here once the effects can do everything its themes need.
 
