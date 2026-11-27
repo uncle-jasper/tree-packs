@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pack Preview</title>
+<!-- The same engine the apps use, loaded from Tree (one engine, PACKS-PLAN.md rule 8).
+     On GitHub Pages this is https://uncle-jasper.github.io/tree/packs.js. -->
+<script src="../tree/packs.js"></script>
+<style>
+  :root {
+    --bg: #f5f0e8; --surface: #ede8de; --text: #2c2416; --accent: #8b6e4e; --muted: #a89880; --border: #d4c8b4;
+    --selection: rgba(139,110,78,0.24);
+    --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  /* No background on html: body's then paints the whole canvas, beneath the
+     effect layers (rain, light) instead of over them, as in the apps. */
+  body { margin: 0; min-height: 100vh; font: 14px/1.5 var(--mono); color: var(--text); background: var(--bg); }
+
+  /* Controls: the pack row, theme row and switches, like an app's quick panel */
+  #panel { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; padding: 12px 16px;
+    background: var(--surface); border-bottom: 1px solid var(--border); position: relative; z-index: 1; }
+  .row { display: flex; align-items: center; gap: 6px; }
+  .row label, .hint { color: var(--muted); font-size: 12px; }
+  .stepper { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 4px; }
+  .stepper button { background: none; border: 0; color: var(--muted); font: inherit; padding: 3px 9px; cursor: pointer; }
+  .stepper button:hover { color: var(--text); }
+  .stepper span { min-width: 9.5em; text-align: center; color: var(--text); }
+  .switch { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text); cursor: pointer; }
+  .switch input { accent-color: var(--accent); margin: 0; }
+  #open { margin-left: auto; }
+  #open button { background: none; border: 1px solid var(--border); border-radius: 4px; color: var(--muted); font: inherit; font-size: 12px; padding: 4px 10px; cursor: pointer; }
+  #open button:hover { color: var(--text); }
+  #note { width: 100%; font-size: 12px; color: var(--muted); min-height: 1.5em; }
+  #note.bad { color: #c0392b; }
+
+  /* A Tree window: write on the left, preview on the right */
+  #win { max-width: 1120px; margin: 24px auto; border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+    background: var(--bg); position: relative; z-index: 0; }
+  .tp-backdrop #win, .tp-backdrop .pane { background: transparent; }
+  .bar { display: flex; align-items: center; gap: 18px; padding: 8px 14px; background: var(--surface);
+    border-bottom: 1px solid var(--border); font-size: 12px; color: var(--text); }
+  .bar .tab { border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+  .bar .sp { flex: 1; }
+  .bar .dim, .status { color: var(--muted); }
+  .panes { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+  .pane { padding: 28px 34px; background: var(--bg); font-size: 15px; line-height: 1.75; overflow: hidden; }
+  .pane + .pane { border-left: 1px solid var(--border); }
+  .status { display: flex; justify-content: space-between; padding: 5px 14px; font-size: 11px;
+    background: var(--surface); border-top: 1px solid var(--border); }
+
+  .src p { margin: 0 0 1em; white-space: pre-wrap; }
+  .src .m { color: var(--muted); }
+  .src .md-h { font-weight: 700; }
+  .src .url { color: var(--muted); }
+  .src blockquote, .src ol, .src ul { margin: 0 0 1em; padding: 0; list-style: none; }
+  .tp-cursor { display: inline-block; width: 2px; height: 1.15em; margin: 0 1px -0.2em; background: var(--accent); }
+
+  .preview h1 { font-size: 1.9em; line-height: 1.25; margin: 0 0 0.6em; }
+  .preview h2 { font-size: 1.35em; margin: 1.2em 0 0.5em; }
+  .preview p { margin: 0 0 1em; }
+  .preview a { color: var(--accent); }
+  .preview blockquote { margin: 0 0 1em; padding-left: 1em; border-left: 3px solid var(--accent); color: var(--muted); font-style: italic; }
+  .preview code { background: var(--surface); padding: 1px 5px; border-radius: 3px; }
+  .preview ul, .preview ol { margin: 0 0 1em; padding-left: 1.4em; }
+  .preview hr { border: 0; border-top: 1px solid var(--border); margin: 1.4em 0; }
+  ::selection { background: var(--selection); }
+
+  @media (max-width: 760px) {
+    #win { margin: 16px; }
+    .panes { grid-template-columns: 1fr; }
+    .pane + .pane { border-left: 0; border-top: 1px solid var(--border); }
+    #open { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<div id="panel">
+  <div class="row"><label>pack</label><div class="stepper"><button id="pack-prev" aria-label="previous pack">‹</button><span id="pack-name">…</span><button id="pack-next" aria-label="next pack">›</button></div></div>
+  <div class="row"><label>theme</label><div class="stepper"><button id="theme-prev" aria-label="previous theme">‹</button><span id="theme-name">…</span><button id="theme-next" aria-label="next theme">›</button></div></div>
+  <div class="row" id="switches"></div>
+  <div class="row" id="open"><button id="open-btn">open a pack file…</button><input type="file" id="file" accept=".json,application/json" hidden></div>
+  <div id="note"></div>
+</div>
+
+<div id="win">
+  <div class="bar"><span class="tab">three-stops.md</span><span class="sp"></span><span>save</span><span>open</span><span class="dim">split</span><span id="bar-theme" class="dim"></span></div>
+  <div class="panes">
+    <div class="pane src">
+      <p><span class="m">#</span> <span class="md-h">Three stops from main</span></p>
+      <p>The rain came in sideways off the river, and the scooters kept going anyway. I stood under the awning of the <span class="m">**</span><b>breakfast shop</b><span class="m">**</span> and watched the steam rise off the <span class="m">*</span><i>soy milk</i><span class="m">*</span> vats.</p>
+      <p><span class="m">##</span> <span class="md-h">What I wrote down</span></p>
+      <p><span class="m">-</span> the old man with the birdcage, again
+<span class="m">-</span> a bus number I didn't recognise: <span class="m">`</span>307<span class="m">`</span>
+<span class="m">- [</span><span class="md-link">the photo I missed</span><span class="m">](</span><span class="url">https://example.com</span><span class="m">)</span></p>
+      <p><span class="m">&gt;</span> Every city has a sound it makes when nobody is listening.<span class="tp-cursor"></span></p>
+    </div>
+    <div class="pane preview">
+      <h1>Three stops from main</h1>
+      <p>The rain came in sideways off the river, and the scooters kept going anyway. I stood under the awning of the <b>breakfast shop</b> and watched the steam rise off the <i>soy milk</i> vats.</p>
+      <h2>What I wrote down</h2>
+      <ul><li>the old man with the birdcage, again</li><li>a bus number I didn't recognise: <code>307</code></li><li><a href="#" onclick="return false">the photo I missed</a></li></ul>
+      <blockquote>Every city has a sound it makes when nobody is listening.</blockquote>
+      <hr>
+      <p>Back home the kettle was already on.</p>
+    </div>
+  </div>
+  <div class="status"><span>112 words · 587 chars</span><span id="contrast"></span><span>ln 14, col 58</span></div>
+</div>
+
+<script>
+(function () {
+  const note = document.getElementById('note');
+  if (!window.TreePacks) {
+    note.className = 'bad';
+    note.textContent = "Couldn't load the pack engine from Tree (../tree/packs.js).";
+    return;
+  }
+  const TP = window.TreePacks;
+  const stage = TP.createStage({
+    selectors: { text: '#win', links: '.preview a, .src .md-link', cursor: '.tp-cursor', headings: '.preview h1, .preview h2, .src .md-h' },
+  });
+  const state = { packs: [], pack: 0, lastUsed: {}, choices: {} };
+  const $ = id => document.getElementById(id);
+
+  function contrast(a, b) {
+    const [x, y] = [TP.luminance(a), TP.luminance(b)].sort((m, n) => n - m);
+    return (x + 0.05) / (y + 0.05);
+  }
+  function show() {
+    const pack = state.packs[state.pack];
+    if (!pack) return;
+    const theme = TP.openingTheme(pack, state.lastUsed);
+    state.lastUsed[pack.id] = theme.id;
+    const key = pack.id + '/' + theme.id;
+    const choices = state.choices[key] || (state.choices[key] = {});
+    stage.apply(theme, choices);
+    $('pack-name').textContent = pack.name + (pack.draft ? ' (file)' : '');
+    $('theme-name').textContent = theme.name;
+    $('bar-theme').textContent = theme.name;
+    const sws = $('switches');
+    sws.textContent = '';
+    for (const s of TP.switchesOf(theme)) {
+      const lab = document.createElement('label'); lab.className = 'switch';
+      const box = document.createElement('input'); box.type = 'checkbox';
+      box.checked = typeof choices[s.label] === 'boolean' ? choices[s.label] : s.on;
+      box.addEventListener('change', () => { choices[s.label] = box.checked; stage.apply(theme, choices); });
+      lab.append(box, document.createTextNode(s.label));
+      sws.append(lab);
+    }
+    const tc = contrast(theme.colors.text, theme.colors.bg), ac = contrast(theme.colors.accent, theme.colors.bg);
+    $('contrast').textContent = `text ${tc.toFixed(1)}:1 · links ${ac.toFixed(1)}:1`;
+    if (!note.classList.contains('bad')) note.textContent = pack.description || '';
+    const u = new URL(location.href);
+    u.searchParams.set('pack', pack.id); u.searchParams.set('theme', theme.id);
+    if (!pack.draft) history.replaceState(null, '', u);
+  }
+  function stepPack(d) { const n = state.packs.length; state.pack = ((state.pack + d) % n + n) % n; note.className = ''; show(); }
+  function stepTheme(d) {
+    const pack = state.packs[state.pack];
+    state.lastUsed[pack.id] = TP.stepTheme(pack, state.lastUsed[pack.id], d).id;
+    show();
+  }
+  $('pack-prev').onclick = () => stepPack(-1);
+  $('pack-next').onclick = () => stepPack(1);
+  $('theme-prev').onclick = () => stepTheme(-1);
+  $('theme-next').onclick = () => stepTheme(1);
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    if (e.key === 'ArrowLeft') stepTheme(-1);
+    if (e.key === 'ArrowRight') stepTheme(1);
+    if (e.key === 'ArrowUp') stepPack(-1);
+    if (e.key === 'ArrowDown') stepPack(1);
+  });
+
+  // A draft pack file, opened from disk or dropped on the page.
+  function openText(txt, name) {
+    const r = TP.check(txt);
+    if (!r.ok) { note.className = 'bad'; note.textContent = name + ': ' + r.error; return; }
+    r.pack.draft = true;
+    const i = state.packs.findIndex(p => p.draft && p.id === r.pack.id);
+    if (i >= 0) state.packs[i] = r.pack; else state.packs.push(r.pack);
+    state.pack = i >= 0 ? i : state.packs.length - 1;
+    note.className = '';
+    show();
+  }
+  $('open-btn').onclick = () => $('file').click();
+  $('file').onchange = e => { const f = e.target.files[0]; if (f) f.text().then(t => openText(t, f.name)); e.target.value = ''; };
+  document.addEventListener('dragover', e => e.preventDefault());
+  document.addEventListener('drop', e => {
+    e.preventDefault();
+    const f = e.dataTransfer.files[0]; if (f) f.text().then(t => openText(t, f.name));
+  });
+
+  // The shelf, plus the built-in packs for comparison.
+  fetch('index.json').then(r => r.json()).then(idx =>
+    Promise.all(idx.packs.map(e => fetch(e.file).then(r => r.text()).then(t => {
+      const r = TP.check(t);
+      if (!r.ok) { note.className = 'bad'; note.textContent = e.file + ': ' + r.error; }
+      return r.ok ? r.pack : null;
+    })))
+  ).catch(() => []).then(shelf => {
+    // Built-in themes use each app's own theme code, which this page doesn't have,
+    // so they're shown by their colors only.
+    const builtin = TP.BUILTIN.map(p => Object.assign({}, p, { name: p.name + ' (colors)',
+      themes: p.themes.filter(t => !t.custom).map(t => Object.assign({}, t, { native: undefined, effects: [] })) }));
+    state.packs = shelf.filter(Boolean).concat(builtin);
+    const q = new URLSearchParams(location.search);
+    const i = state.packs.findIndex(p => p.id === q.get('pack'));
+    if (i >= 0) { state.pack = i; if (q.get('theme')) state.lastUsed[state.packs[i].id] = q.get('theme'); }
+    show();
+  });
+})();
+</script>
+</body>
+</html>

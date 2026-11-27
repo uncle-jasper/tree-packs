@@ -23,6 +23,7 @@ This repo is Dan's pack studio and the shelf the apps install from. Theme packs 
 ## Making a pack
 
 1. Talk it through with Dan: the mood, the source, 2–6 themes, which one is the everyday theme (first opened, and the one most people would write in).
+   Also its description: one short line naming what's in it, like Judgment Day's "Cold steel blue, chrome, molten iron and machine vision." Every pack needs one.
 2. Preview it as an Artifact page. Every theme shown as a Tree window (editor and preview side by side), with working effects and switches.
 3. Iterate until Dan is happy.
 4. Write `packs/<id>.tree-pack.json`, add the pack to `index.json` (swatches = each theme's `bg`, in order).

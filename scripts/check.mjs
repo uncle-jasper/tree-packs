@@ -76,7 +76,9 @@ function checkPack(file) {
   if (file !== `${p.id}.tree-pack.json`) fail(where, `file should be named ${p.id}.tree-pack.json`);
   if (typeof p.name !== 'string' || !p.name || p.name.length > 24) fail(where, 'name should be 1–24 characters');
   if (!VER.test(p.version ?? '')) fail(where, 'version should look like 1.0.0');
-  if (p.description !== undefined && (typeof p.description !== 'string' || p.description.length > 120)) fail(where, 'description should be up to 120 characters');
+  if (typeof p.description !== 'string' || !p.description.trim()) fail(where, 'description is missing: one short line, like "Cold steel blue, chrome, molten iron and machine vision."');
+  else if (p.description.length > 120) fail(where, 'description should be up to 120 characters');
+  else if (p.description.length > 60) warn(where, `description is ${p.description.length} characters; under 60 reads best`);
   if (!Array.isArray(p.themes) || p.themes.length < 1 || p.themes.length > 8) { fail(where, 'themes should be 1–8 themes'); return p; }
   const ids = new Set();
   for (const t of p.themes) {
