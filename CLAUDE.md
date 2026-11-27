@@ -63,7 +63,6 @@ Retro's looks are drawn by each app's own code today. These effects would let Re
 - **Screen flicker**: the CRT's flicker over the whole screen or the text, not only colored light behind it (`light` already has `flicker`). For terminal with crt, amber crt and doogie journal.
 - **CRT screen shape**: the curved-screen edges and brighter rim of the CRT look.
 - **Phosphor bloom**: a softer, wider glow than `glow`, for moonwalker and the CRT themes. May turn out to be `glow` with a larger range.
-- **Snow**: a `style: "snow"` for `particles` (round flakes that drift and sway; `length` sets their size). Built and tested in Tree's `packs.js` on the draft pull request "packs.js: snow"; needs that merged, the engine copied to Ginkgo and the plugin, and FORMAT.md and `check.mjs` to allow `style`. Yokosuka '86's first snow uses it.
 
 ## Drafts
 
@@ -78,7 +77,7 @@ Themes and where they stand with Dan:
 - **harbor**: three tries. Too green twice; Dan wants grey. Latest: neutral warehouse greys, grey-violet sky light above, a faint dark-green sea band at the bottom, forklift orange accent, falling rain switch. Not yet reviewed; the sea band may need to go.
 - **neon night**: jazz-bar red and convenience-store white-green signs. From memory, not stills.
 - **arcade**: Dan liked it.
-- **first snow**: needs snow (Effect requests). From memory, not stills.
+- **first snow**: snow is ready (`style: "snow"` on `particles`, in all three apps once the 2.0.2 / Just Write pull requests are merged). From memory, not stills.
 
 Dan's picture of Shenmue: a lot of grey, old quaint shops, grey skies; at night, neon from the jazz bar and convenience store signs. His stills (house interior, harbor by day and in rain) helped far more than memory: ask for stills of Dobuita by day and night, and of snow, before tuning those. Everyday theme is still open: sakuragaoka is dark now; dobuita, or a light paper theme, are the options to put to him.
 

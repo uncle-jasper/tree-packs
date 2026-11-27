@@ -67,7 +67,7 @@ Every animated effect pauses while the app is in the background and holds still 
 
 Numbers outside their range are clamped to it. An effect type an app doesn't know is skipped, and the theme still loads with its colors.
 
-### `particles`: falling streaks behind the page (rain)
+### `particles`: falling rain or snow behind the page
 
 ```json
 { "type": "particles", "switch": "falling rain", "on": true,
@@ -82,6 +82,7 @@ Numbers outside their range are clamped to it. An effect type an app doesn't kno
 | `speed` | 0.2–3 | 1 | How fast they fall |
 | `length` | 0.2–3 | 1 | How long each streak is |
 | `slant` | -0.5–0.5 | 0.12 | Sideways lean. Positive leans left as it falls, like Tree's rain. |
+| `style` | `rain` or `snow` | `rain` | `snow`: round flakes that fall slowly and sway, nearer ones bigger and brighter. `length` sets their size. An app from before snow draws rain instead (the plugin got snow in 2.0.2). |
 | `regions` | up to 8 | none | Areas where streaks take on another color (below) |
 
 **Regions** light the rain. Each is a rectangle in fractions of the page (`x`, `y`, `w`, `h`, 0–1), a `color`, and a `chance` (0–1): the share of streaks starting above it that pick up its light. A lit streak takes the color of whichever region it's falling through at that moment, so it can change color on the way down; outside every region it's its normal color. Wet Neon's crossing light is four regions.
