@@ -1,0 +1,244 @@
+{
+  "treePack": 1,
+  "id": "yokosuka-86",
+  "name": "Yokosuka '86",
+  "version": "0.1.0",
+  "description": "Paper walls, grey skies, shop signs, first snow.",
+  "everyday": "sakuragaoka",
+  "themes": [
+    {
+      "id": "sakuragaoka",
+      "name": "sakuragaoka",
+      "light": false,
+      "colors": {
+        "bg": "#2b2927",
+        "surface": "#1e1915",
+        "text": "#e8e3d9",
+        "accent": "#df7c61",
+        "muted": "#8f877d",
+        "border": "#3d3129"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "spots": [
+            {
+              "x": 0.6,
+              "y": 0.1,
+              "w": 0.55,
+              "h": 0.45,
+              "color": "#efe9de",
+              "strength": 0.08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leather",
+      "name": "leather",
+      "light": false,
+      "colors": {
+        "bg": "#1c1612",
+        "surface": "#241c17",
+        "text": "#e6ddcd",
+        "accent": "#c8664b",
+        "muted": "#867464",
+        "border": "#3a2d24"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "spots": [
+            {
+              "x": 0.6,
+              "y": 0.1,
+              "w": 0.55,
+              "h": 0.45,
+              "color": "#efe6d8",
+              "strength": 0.07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dobuita",
+      "name": "dobuita",
+      "colors": {
+        "bg": "#1d1a22",
+        "surface": "#24202a",
+        "text": "#e6ddd2",
+        "accent": "#ec7a62",
+        "muted": "#706673",
+        "border": "#302a36"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "spots": [
+            {
+              "x": 0.22,
+              "y": 0,
+              "w": 0.45,
+              "h": 0.5,
+              "color": "#ff8a5c",
+              "strength": 0.11
+            },
+            {
+              "x": 0.8,
+              "y": 0,
+              "w": 0.4,
+              "h": 0.45,
+              "color": "#ffd27a",
+              "strength": 0.08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harbor",
+      "name": "harbor",
+      "colors": {
+        "bg": "#2a2b29",
+        "surface": "#232422",
+        "text": "#dcdcd6",
+        "accent": "#e2803f",
+        "muted": "#7b7d76",
+        "border": "#3a3c38"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "spots": [
+            {
+              "x": 0.5,
+              "y": 0,
+              "w": 0.95,
+              "h": 0.55,
+              "color": "#8a8fa6",
+              "strength": 0.08
+            }
+          ],
+          "streaks": [
+            {
+              "x": 0.5,
+              "w": 1,
+              "h": 0.22,
+              "color": "#2f6a52",
+              "strength": 0.1
+            }
+          ]
+        },
+        {
+          "type": "particles",
+          "switch": "falling rain",
+          "on": false,
+          "color": "#aab0bf"
+        }
+      ]
+    },
+    {
+      "id": "neon-night",
+      "name": "neon night",
+      "colors": {
+        "bg": "#141518",
+        "surface": "#1a1c20",
+        "text": "#d9d9d6",
+        "accent": "#ea6352",
+        "muted": "#666a70",
+        "border": "#25282d"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "flicker": true,
+          "spots": [
+            {
+              "x": 0.18,
+              "y": 0,
+              "w": 0.4,
+              "h": 0.55,
+              "color": "#ff4a3a",
+              "strength": 0.13
+            },
+            {
+              "x": 0.82,
+              "y": 0,
+              "w": 0.38,
+              "h": 0.5,
+              "color": "#c8ffe6",
+              "strength": 0.09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arcade",
+      "name": "arcade",
+      "colors": {
+        "bg": "#0d0b16",
+        "surface": "#141022",
+        "text": "#d9d5f0",
+        "accent": "#4fd6e8",
+        "muted": "#5f5982",
+        "border": "#221d36"
+      },
+      "effects": [
+        {
+          "type": "light",
+          "streaks": [
+            {
+              "x": 0.5,
+              "w": 1,
+              "h": 0.4,
+              "color": "#b04cff",
+              "strength": 0.07
+            }
+          ]
+        },
+        {
+          "type": "overlay",
+          "scanlines": 0.1,
+          "vignette": {
+            "color": "#000000",
+            "strength": 0.3
+          }
+        },
+        {
+          "type": "glow",
+          "target": "links",
+          "strength": 0.3
+        }
+      ]
+    },
+    {
+      "id": "first-snow",
+      "name": "first snow",
+      "colors": {
+        "bg": "#1a2230",
+        "surface": "#1f2838",
+        "text": "#d7dfe9",
+        "accent": "#a3c6e8",
+        "muted": "#61718a",
+        "border": "#2a3446"
+      },
+      "effects": [
+        {
+          "type": "particles",
+          "switch": "falling snow",
+          "on": true,
+          "style": "snow",
+          "color": "#eef3f9",
+          "opacity": 1.1,
+          "density": 0.7,
+          "speed": 1,
+          "length": 1,
+          "slant": 0.05
+        }
+      ]
+    }
+  ]
+}
