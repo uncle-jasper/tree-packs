@@ -101,12 +101,12 @@
       "id": "harbor",
       "name": "harbor",
       "colors": {
-        "bg": "#26272a",
-        "surface": "#2e3033",
-        "text": "#d9dbde",
+        "bg": "#2a2b29",
+        "surface": "#232422",
+        "text": "#dcdcd6",
         "accent": "#e2803f",
-        "muted": "#767a80",
-        "border": "#3a3d41"
+        "muted": "#7b7d76",
+        "border": "#3a3c38"
       },
       "effects": [
         {
@@ -117,7 +117,16 @@
               "y": 0,
               "w": 0.95,
               "h": 0.55,
-              "color": "#9a9fb3",
+              "color": "#8a8fa6",
+              "strength": 0.08
+            }
+          ],
+          "streaks": [
+            {
+              "x": 0.5,
+              "w": 1,
+              "h": 0.22,
+              "color": "#2f6a52",
               "strength": 0.1
             }
           ]
