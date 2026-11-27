@@ -206,7 +206,8 @@
   ).catch(() => []).then(shelf => {
     // Built-in themes use each app's own theme code, which this page doesn't have,
     // so they're shown by their colors only.
-    const builtin = TP.BUILTIN.map(p => Object.assign({}, p, { name: p.name + ' (colors)',
+    const builtin = TP.BUILTIN.map(p => Object.assign({}, p, {
+      description: p.description + ' Shown here in colors only; the apps draw their full look.',
       themes: p.themes.filter(t => !t.custom).map(t => Object.assign({}, t, { native: undefined, effects: [] })) }));
     state.packs = shelf.filter(Boolean).concat(builtin);
     const q = new URLSearchParams(location.search);
