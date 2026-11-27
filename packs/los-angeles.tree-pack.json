@@ -1,0 +1,54 @@
+{
+  "treePack": 1,
+  "id": "los-angeles",
+  "name": "Los Angeles",
+  "version": "1.0.0",
+  "description": "Canyon gold, Dodger blue, Malibu sunset, city lights.",
+  "everyday": "downtown-skyline",
+  "themes": [
+    {
+      "id": "june-gloom",
+      "name": "june gloom",
+      "light": true,
+      "colors": { "bg": "#c8cbc9", "surface": "#bdc1bf", "text": "#1e2326", "accent": "#244a5d", "muted": "#646c6c", "border": "#adb2b0" }
+    },
+    {
+      "id": "griffith-park",
+      "name": "griffith park",
+      "light": true,
+      "colors": { "bg": "#e0c595", "surface": "#d5b884", "text": "#241a0e", "accent": "#2c421b", "muted": "#72592f", "border": "#c8a970" }
+    },
+    {
+      "id": "dodger-blue",
+      "name": "dodger blue",
+      "colors": { "bg": "#004b85", "surface": "#004175", "text": "#f4f7fb", "accent": "#bfe0ff", "muted": "#8fb4dc", "border": "#16609a" }
+    },
+    {
+      "id": "malibu-sunset",
+      "name": "malibu sunset",
+      "light": true,
+      "colors": { "bg": "#e39a4a", "surface": "#d88c3c", "text": "#1a0e06", "accent": "#4e1503", "muted": "#6a3e1c", "border": "#c97f33" },
+      "effects": [
+        { "type": "light",
+          "spots":   [ { "x": 0.5, "y": 0, "w": 1, "h": 0.8, "color": "#e2582a", "strength": 0.26 } ],
+          "streaks": [ { "x": 0.5, "w": 1, "h": 0.5, "color": "#ffcf4a", "strength": 0.3 } ] }
+      ]
+    },
+    {
+      "id": "downtown-skyline",
+      "name": "downtown skyline",
+      "colors": { "bg": "#0a1020", "surface": "#0f1729", "text": "#d6dbe4", "accent": "#6fd6e8", "muted": "#56627a", "border": "#18223a" },
+      "effects": [
+        { "type": "light", "streaks": [ { "x": 0.5, "w": 1, "h": 0.55, "color": "#e8973e", "strength": 0.22 } ] }
+      ]
+    },
+    {
+      "id": "century-city",
+      "name": "century city",
+      "colors": { "bg": "#17120c", "surface": "#1f1810", "text": "#ecdcc0", "accent": "#e0b155", "muted": "#7a6a52", "border": "#2c2318" },
+      "effects": [
+        { "type": "light", "spots": [ { "x": 0.5, "y": 0, "w": 1, "h": 0.6, "color": "#f2c070", "strength": 0.10 } ] }
+      ]
+    }
+  ]
+}

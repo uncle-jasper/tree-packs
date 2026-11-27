@@ -40,6 +40,8 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 - **Readable first.** Effects sit behind the text or at the edges, never over the writing. The writing area stays calm.
 - **One accent per theme.** Two accent colors in the text got busy (tried in Wet Neon). Put a second color in the light, not the text.
 - **Subtle motion.** Rain and light should feel ambient. Dan loves falling rain; he also wanted a way to turn it off for others, which is why motion goes behind a `switch` unless it's part of the theme's identity.
+- **Not every theme needs an effect.** Every pack should have plain themes: palette only, no light or glow. Use background light only where it's the theme's identity (a sunset, a city glow, a mill's heat), not by default. Judgment Day used it well because it wasn't on everything. Too much and it feels superfluous.
+- **Light as edge gradients, not splotches.** Background light should be a broad wash rising from the bottom edge or falling from the top, full width or close to it, like cyberdyne (light from above) and steel mill (heat from below). No small spots popping up mid-page or in corners, and no narrow glows jutting up from the bottom: they distract. Several colors are fine, as long as each is a broad edge wash (orange from the top, gold from the bottom, colors layered or blending). Make an exception only with a good reason, and raise it with Dan first.
 - **The teal shift.** The Rain pack's greys all lean slightly toward sea-grey/teal. Dan liked it; a pack's themes should share a family tint like that.
 - Inspired by films and places is fine: palettes and moods. No logos, characters, artwork or quoted dialogue in packs.
 
@@ -49,6 +51,8 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 |---|---|---|---|
 | Rain `rain` | overcast, **rain**, downpour, wet street, wet neon | falling rain on all five (on for downpour, wet neon); wet neon: crossed magenta and cyan light, lit rain, link glow | 1.0.0, launch pack |
 | Judgment Day `judgment-day` | **cyberdyne**, liquid metal, steel mill, hud | cyberdyne: cold light from above; liquid metal: chrome sheen on headings; steel mill: heat glow (12%, raised from 7% in 1.0.1), glowing cursor and links; hud: red glow, scanlines, red vignette | 1.0.1, launch pack |
+| Noir `noir` | late edition, **nitrate**, smoke room, wet asphalt, alley | all greyscale, faint warm-silver tint, accent is the brightest white. late edition and nitrate plain; smoke room: faint text bloom; wet asphalt: lamplight wash from the top, reflection from the bottom, falling rain (on), like downpour; alley: black vignette | 1.0.0 |
+| Los Angeles `los-angeles` | june gloom, griffith park, dodger blue, malibu sunset, **downtown skyline**, century city | Dan's LA, morning into night, most palettes from his photos. june gloom, griffith park, dodger blue plain (dodger blue is #004B85, a step darker than the official #005A9C, Dan's pick); malibu sunset: red sky wash from the top, gold from the bottom; downtown skyline: amber city glow from the bottom; century city: tungsten glow from the top | 1.0.0 |
 
 **In progress:** Yokosuka '86 `yokosuka-86` (`drafts/`), Dan's Shenmue pack, set aside to pick up again. See "Drafts" below.
 
@@ -63,6 +67,10 @@ Retro's looks are drawn by each app's own code today. These effects would let Re
 - **Screen flicker**: the CRT's flicker over the whole screen or the text, not only colored light behind it (`light` already has `flicker`). For terminal with crt, amber crt and doogie journal.
 - **CRT screen shape**: the curved-screen edges and brighter rim of the CRT look.
 - **Phosphor bloom**: a softer, wider glow than `glow`, for moonwalker and the CRT themes. May turn out to be `glow` with a larger range.
+
+Not an effect, but an app setting Dan wants:
+
+- **Background light switch**: one switch in each app's settings that turns off every `light` effect (spots and streaks) in every pack, whatever the pack says. Backgrounds only: text glow, particles, sheen and overlays stay as they are, since the distracting ones already have their own switches. No pack or format change needed.
 
 ## Drafts
 
