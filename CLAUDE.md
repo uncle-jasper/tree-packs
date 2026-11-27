@@ -40,7 +40,7 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 - **Readable first.** Effects sit behind the text or at the edges, never over the writing. The writing area stays calm.
 - **One accent per theme.** Two accent colors in the text got busy (tried in Wet Neon). Put a second color in the light, not the text.
 - **Subtle motion.** Rain and light should feel ambient. Dan loves falling rain; he also wanted a way to turn it off for others, which is why motion goes behind a `switch` unless it's part of the theme's identity.
-- **Light as edge gradients, not splotches.** Background light should be a broad wash rising from the bottom edge or falling from the top, full width or close to it, like cyberdyne (light from above) and steel mill (heat from below). No small spots popping up mid-page or in corners. Make an exception only with a good reason, and raise it with Dan first.
+- **Light as edge gradients, not splotches.** Background light should be a broad wash rising from the bottom edge or falling from the top, full width or close to it, like cyberdyne (light from above) and steel mill (heat from below). No small spots popping up mid-page or in corners, and no narrow glows jutting up from the bottom: they distract. Several colors are fine, as long as each is a broad edge wash (orange from the top, gold from the bottom, colors layered or blending). Make an exception only with a good reason, and raise it with Dan first.
 - **The teal shift.** The Rain pack's greys all lean slightly toward sea-grey/teal. Dan liked it; a pack's themes should share a family tint like that.
 - Inspired by films and places is fine: palettes and moods. No logos, characters, artwork or quoted dialogue in packs.
 
