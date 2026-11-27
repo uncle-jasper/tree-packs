@@ -64,6 +64,10 @@ Retro's looks are drawn by each app's own code today. These effects would let Re
 - **CRT screen shape**: the curved-screen edges and brighter rim of the CRT look.
 - **Phosphor bloom**: a softer, wider glow than `glow`, for moonwalker and the CRT themes. May turn out to be `glow` with a larger range.
 
+Not an effect, but an app setting Dan wants:
+
+- **Background light switch**: one switch in each app's settings that turns off every `light` effect (spots and streaks) in every pack, whatever the pack says. Backgrounds only: text glow, particles, sheen and overlays stay as they are, since the distracting ones already have their own switches. No pack or format change needed.
+
 ## Drafts
 
 ### Yokosuka '86 (`drafts/yokosuka-86.tree-pack.json`)
