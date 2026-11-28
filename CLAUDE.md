@@ -54,7 +54,7 @@ Change the file, raise `version` (patch for color tweaks, minor for new themes o
 | Noir `noir` | late edition, **nitrate**, smoke room, wet asphalt, alley | all greyscale, faint warm-silver tint, accent is the brightest white. late edition and nitrate plain; smoke room: faint text bloom; wet asphalt: lamplight wash from the top, reflection from the bottom, falling rain (on), like downpour; alley: black vignette | 1.0.0 |
 | Los Angeles `los-angeles` | june gloom, griffith park, dodger blue, malibu sunset, **downtown skyline**, century city | Dan's LA, morning into night, most palettes from his photos. june gloom, griffith park, dodger blue plain (dodger blue is #004B85, a step darker than the official #005A9C, Dan's pick); malibu sunset: red sky wash from the top, gold from the bottom; downtown skyline: amber city glow from the bottom; century city: tungsten glow from the top | 1.0.0 |
 
-**In progress:** Yokosuka '86 `yokosuka-86` (`drafts/`), Dan's Shenmue pack, set aside to pick up again. See "Drafts" below.
+**In progress:** Yokosuka '86 `yokosuka-86` (`drafts/`), Dan's Shenmue pack, set aside to pick up again. Quiet `quiet` (`drafts/`), minimal plain themes, on hold. See "Drafts" below.
 
 Built into the apps, not here: **Classic** (parchment, paper, ash, sage, dark, moss, slate, custom 1–3) and, for now, **Retro** (game boy, moonwalker, terminal with crt, amber crt, doogie journal). Retro moves here once the effects can do everything its themes need.
 
@@ -88,4 +88,13 @@ Themes and where they stand with Dan:
 - **first snow**: snow is ready (`style: "snow"` on `particles`, in all three apps once the 2.0.2 / Just Write pull requests are merged). From memory, not stills.
 
 Dan's picture of Shenmue: a lot of grey, old quaint shops, grey skies; at night, neon from the jazz bar and convenience store signs. His stills (house interior, harbor by day and in rain) helped far more than memory: ask for stills of Dobuita by day and night, and of snow, before tuning those. Everyday theme is still open: sakuragaoka is dark now; dobuita, or a light paper theme, are the options to put to him.
+
+### Quiet (`drafts/quiet.tree-pack.json`)
+
+Minimal pack: plain themes, no effects, easy on the eyes for long sessions. Text kept near 8:1 (softer than Classic, above the 7:1 floor), links about 5:1. Working name, not settled. Description: "Stone, fog, dusk, graphite and ink. Soft contrast, no effects." On hold at Dan's request; preview page: https://claude.ai/artifact/MWBBP3MpTS8PTAQdypwUZ3
+
+- **stone** (everyday): dimmed warm greige light theme. Started as **linen**, a warm off-white; Dan found it too close to Classic's parchment.
+- **fog**: dimmed blue-grey light theme. The first, paler fog was too close to Classic's paper. Both light themes were dimmed (about 30% darker than parchment) to stand apart from Classic. Not yet reviewed after the change. Fallback idea if dimmed feels heavy: bright but clearly tinted (pale celadon, faint dusty rose).
+- **dusk**, **graphite**, **ink**: mid-dark warm grey (clay accent), soft charcoal (sage), blue-black (brass). Not yet commented on.
+- Open: the family tint (stone, dusk, graphite lean warm; fog, ink cool), and the name.
 
