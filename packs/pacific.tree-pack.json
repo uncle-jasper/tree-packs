@@ -1,0 +1,49 @@
+{
+  "treePack": 1,
+  "id": "pacific",
+  "name": "Pacific",
+  "version": "1.0.0",
+  "description": "Sand, sea glass, kelp and open water.",
+  "everyday": "open-water",
+  "themes": [
+    {
+      "id": "low-tide",
+      "name": "low tide",
+      "light": true,
+      "colors": { "bg": "#ddd5c6", "surface": "#d3cbbb", "text": "#34393a", "accent": "#265d55", "muted": "#7a776d", "border": "#c6bdad" }
+    },
+    {
+      "id": "sea-glass",
+      "name": "sea glass",
+      "light": true,
+      "colors": { "bg": "#cce0dc", "surface": "#c0d6d2", "text": "#233a3a", "accent": "#1a5c6c", "muted": "#67807d", "border": "#b2c9c6" }
+    },
+    {
+      "id": "shallows",
+      "name": "shallows",
+      "colors": { "bg": "#2c4d50", "surface": "#31555a", "text": "#e3ece8", "accent": "#e6d3a8", "muted": "#8eaaa8", "border": "#3c6266" },
+      "effects": [
+        { "type": "light", "spots": [ { "x": 0.5, "y": 0, "w": 1, "h": 1, "color": "#cdf1e6", "strength": 0.12 } ] }
+      ]
+    },
+    {
+      "id": "open-water",
+      "name": "open water",
+      "colors": { "bg": "#0f2630", "surface": "#132c37", "text": "#b9d0d2", "accent": "#8fd3cf", "muted": "#587880", "border": "#1b3642" }
+    },
+    {
+      "id": "kelp-forest",
+      "name": "kelp forest",
+      "colors": { "bg": "#15241f", "surface": "#1a2a24", "text": "#bcc9b8", "accent": "#c9a85a", "muted": "#5f7264", "border": "#22342d" }
+    },
+    {
+      "id": "the-deep",
+      "name": "the deep",
+      "colors": { "bg": "#070d16", "surface": "#0b121c", "text": "#a9b8c4", "accent": "#5fd6e0", "muted": "#4a5b6c", "border": "#141d29" },
+      "effects": [
+        { "type": "particles", "switch": "marine snow", "on": false, "style": "snow",
+          "color": "#8fb3c2", "opacity": 0.5, "density": 0.6, "speed": 0.3, "length": 0.4, "slant": 0 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "treePack": 1,
+  "id": "quiet",
+  "name": "Quiet",
+  "version": "0.1.0",
+  "description": "Stone, fog, dusk, graphite and ink. Soft contrast, no effects.",
+  "everyday": "stone",
+  "themes": [
+    {
+      "id": "stone",
+      "name": "stone",
+      "light": true,
+      "colors": { "bg": "#d4cdc2", "surface": "#cac3b7", "text": "#3a332b", "accent": "#7f432c", "muted": "#776d61", "border": "#bdb5a8" }
+    },
+    {
+      "id": "fog",
+      "name": "fog",
+      "light": true,
+      "colors": { "bg": "#ccd4d6", "surface": "#c2cbcd", "text": "#313b40", "accent": "#3a586c", "muted": "#6b777d", "border": "#b6c0c3" }
+    },
+    {
+      "id": "dusk",
+      "name": "dusk",
+      "colors": { "bg": "#35312e", "surface": "#3c3835", "text": "#d3cbc1", "accent": "#d4a083", "muted": "#8a827a", "border": "#47423e" }
+    },
+    {
+      "id": "graphite",
+      "name": "graphite",
+      "colors": { "bg": "#232322", "surface": "#292928", "text": "#bdb9b1", "accent": "#9db494", "muted": "#6f6c67", "border": "#343432" }
+    },
+    {
+      "id": "ink",
+      "name": "ink",
+      "colors": { "bg": "#161a20", "surface": "#1b2027", "text": "#b4b9c0", "accent": "#c9ad76", "muted": "#646b77", "border": "#272d36" }
+    }
+  ]
+}
